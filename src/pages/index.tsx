@@ -2,11 +2,13 @@ import {
   CounterContext,
   CounterJotai,
   CounterRecoil,
+  CounterRedux,
   CounterUnstated,
   CounterZustand,
   FormContext,
   FormJotai,
   FormRecoil,
+  FormRedux,
   FormUnstated,
   FormZustand,
 } from "@/containers";
@@ -42,6 +44,12 @@ export default function Home() {
         <p>Unstated :</p>
         <CounterUnstated />
         <FormUnstated />
+      </div>
+
+      <div>
+        <p>Redux :</p>
+        <CounterRedux />
+        <FormRedux />
       </div>
     </div>
   );

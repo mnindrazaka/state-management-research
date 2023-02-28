@@ -1,4 +1,5 @@
 import { ContextProvider } from "@/stores/context";
+import { ReduxProvider } from "@/stores/redux";
 import { UnstatedCounter, UnstatedForm } from "@/stores/unstated";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
@@ -18,7 +19,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <RecoilRoot>
           <UnstatedCounter.Provider>
             <UnstatedForm.Provider>
-              <Component {...pageProps} />
+              <ReduxProvider>
+                <Component {...pageProps} />
+              </ReduxProvider>
             </UnstatedForm.Provider>
           </UnstatedCounter.Provider>
         </RecoilRoot>
