@@ -1,8 +1,10 @@
 import {
   CounterContext,
+  CounterJotai,
   CounterRecoil,
   CounterZustand,
   FormContext,
+  FormJotai,
   FormRecoil,
   FormZustand,
 } from "@/containers";
@@ -26,6 +28,12 @@ export default function Home() {
         <p>Recoil :</p>
         <CounterRecoil />
         <FormRecoil />
+      </div>
+
+      <div>
+        <p>Jotai :</p>
+        <CounterJotai />
+        <FormJotai />
       </div>
     </div>
   );
